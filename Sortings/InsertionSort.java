@@ -6,8 +6,8 @@ public class InsertionSort {
 	
 	public static void ArrayPrint(int[] arr) {
 		 
-		for(int i=0;i<arr.length;i++) {
-			System.out.print(arr[i] + " ");
+		for(int i : arr) {
+			System.out.print(i + " ");
 		}
 	}
 	
