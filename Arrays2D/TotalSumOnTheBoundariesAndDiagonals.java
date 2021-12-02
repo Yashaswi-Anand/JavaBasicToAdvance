@@ -16,13 +16,11 @@ public class TotalSumOnTheBoundariesAndDiagonals {
             for (int j = 0; j < n; j++) {
      
                 // Condition for diagonal
-               
                 if (i == j || (i + j) == n - 1) {
                     sum += arr[i][j];
                 }
      
                 // Condition for Boundary
-              
                 else if (i == 0 || j == 0 || i == n - 1|| j == n - 1) {
                     sum += arr[i][j];
                 }
