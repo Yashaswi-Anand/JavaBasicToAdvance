@@ -1,7 +1,7 @@
 package fandamental;
 import java.util.*;
 
-public class HelloWrld {
+public class HelloWorld {
 
 	public static void main(String[] args) {
 		// ctrl+ / = is comment the line
