@@ -19,7 +19,7 @@ public class PrintSpiral {
         
         while(k<m && l<n){
         	
-        	// Print the first row
+         // Print the first row
             for(i=l;i<n;i++){
                 System.out.print(matrix[k][i] + " ");
             }
