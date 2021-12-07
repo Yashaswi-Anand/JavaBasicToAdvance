@@ -36,7 +36,9 @@ public class ConvertSmallerToLargerLetter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		String str = "i  am a student of the third year.";
+		// TODO: Not work if add space at end of sentence
 		
 		String convertedString = convertString(str);
 		System.out.println(convertedString);
