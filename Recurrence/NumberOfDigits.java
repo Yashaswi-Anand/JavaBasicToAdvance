@@ -6,11 +6,11 @@ class Solution {
   // TODO : error in code
 	public static int count(int n){
 		if(n == 0){
-			return 1;
+			return 0;
 		}
 		
 		int smallAns = count(n / 10);
-		return smallAns;
+		return smallAns+1;
 	}
 
 }
