@@ -22,6 +22,7 @@ package Recurrence;
 
 public class FindStep {
 	
+	// using recursion
 	public static int staircase(int n){
 		
         if(n==0) return 1;
