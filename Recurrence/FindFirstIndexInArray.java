@@ -52,6 +52,7 @@ public class FindFirstIndexInArray {
 		for(int i=0;i<n;i++) input[i] = sc.nextInt();
 		int x = sc.nextInt();
 		System.out.println(firstIndex(input,x));
+		sc.close();
 
 	}
 
