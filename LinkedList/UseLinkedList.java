@@ -2,6 +2,12 @@ package LinkedList;
 
 public class UseLinkedList {
 	
+	public static void ReverseLinkedList(Node<Integer> head){
+		if(head == null) return;
+		ReverseLinkedList( head.next);
+		System.out.print(head.data + " ");
+		
+	}
 	
 	public static Node<Integer> createLinkedList(){
 		 Node<Integer> a = new Node<>(10);
@@ -13,7 +19,6 @@ public class UseLinkedList {
 		 System.out.println(a.next); // null
 		 a.next = b;
 		 b.next = c;
-		 
 		 return a;
 	}
 	
@@ -55,7 +60,9 @@ public class UseLinkedList {
 		 print(head);
 		 System.out.print("Length Of Linked List: ");  // 3
 		 int length = LengthOfLinkedList(head);
-		 System.out.print(length);
+		 System.out.println(length);
+		 System.out.print("Print Reverse linked list: ");
+		 ReverseLinkedList(head);
 		 
 
 	}
