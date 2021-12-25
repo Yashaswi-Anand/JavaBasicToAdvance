@@ -1,14 +1,7 @@
 package LinkedList;
 
-public class UseLinkedList {
-	
-	public static void ReverseLinkedList(Node<Integer> head){
-		if(head == null) return;
-		ReverseLinkedList( head.next);
-		System.out.print(head.data + " ");
-		
-	}
-	
+public class LinkedListUse {
+
 	public static Node<Integer> createLinkedList(){
 		 Node<Integer> a = new Node<>(10);
 		 Node<Integer> b = new Node<>(20);
@@ -30,6 +23,15 @@ public class UseLinkedList {
 		}
 	}
 	
+	public static void print(Node<Integer> head) {
+		while(head != null) {
+			System.out.print(head.data + " ");
+			head = head.next;  // its is iterator like as i++ in for loop
+
+		}
+		System.out.println();
+	}
+	
 	public static int LengthOfLinkedList(Node<Integer> head) {
 		int count =0;
 		Node<Integer> temp = head;
@@ -41,15 +43,13 @@ public class UseLinkedList {
 		return count;
 	}
 	
-	public static void print(Node<Integer> head) {
-		while(head != null) {
-			System.out.print(head.data + " ");
-			head = head.next;  // its is iterator like as i++ in for loop
-
-		}
-		System.out.println();
+	public static void ReverseLinkedList(Node<Integer> head){
+		if(head == null) return;
+		ReverseLinkedList( head.next);
+		System.out.print(head.data + " ");
+		
 	}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 Node<Integer> head =  createLinkedList();
@@ -63,8 +63,6 @@ public class UseLinkedList {
 		 System.out.println(length);
 		 System.out.print("Print Reverse linked list: ");
 		 ReverseLinkedList(head);
-		 
-
 	}
 
 }

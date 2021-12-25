@@ -62,6 +62,19 @@ public class TakeUserInputLinkedList {
 		printNode(head.next);
 		
 	}
+	
+	private static Node<Integer> DeleteElement(Node<Integer> head, int pos) {
+		if(head == null) return head;
+		
+		if(pos == 0) {
+			head = head.next;
+			return  head;
+		}
+		Node<Integer> temp = DeleteElement(head.next,pos-1);
+		head.next = temp;
+		return head;
+		
+	}
     
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -69,11 +82,19 @@ public class TakeUserInputLinkedList {
 		Node<Integer> head  = takeInput();
 		printNode(head);
 		System.out.println();
+		System.out.println("Recursively Insert Element at Position:");
 		head  = InsertElement(head,20,2);
+		printNode(head);
+		System.out.println();
+		System.out.println("Recursively Insert Element at Position:");
+		head  = DeleteElement(head,2);
 		printNode(head);
 		
 		
-
+		
 	}
+
+
+	
 
 }
