@@ -6,9 +6,17 @@ public class ReverseLLRecursively {
 	
 	public static Node<Integer> Reverse(Node<Integer> head) {
 		
-		//TODO: here
-		
-		return head;
+		if(head == null || head.next == null) {
+			return head;
+		}
+		Node<Integer> smallHead = Reverse(head.next);
+		Node<Integer> tail = smallHead;
+		while(tail.next != null) {
+			tail = tail.next;
+		}
+		tail.next = head;
+		head.next = null;
+		return smallHead;
 	}
 	
 	public static Node<Integer> takeInput(){
@@ -43,7 +51,7 @@ public class ReverseLLRecursively {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 Node<Integer> head =  takeInput();
-		 Reverse(head);
+		 head =  Reverse(head);
 		 printNode(head);
 		 
 	}
