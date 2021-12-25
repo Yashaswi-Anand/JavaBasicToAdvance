@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ReverseLLRecursively {
 	
 	public static Node<Integer> Reverse(Node<Integer> head) {
+		// time complexity = o(n^2)
 		
 		if(head == null || head.next == null) {
 			return head;
@@ -51,7 +52,8 @@ public class ReverseLLRecursively {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 Node<Integer> head =  takeInput();
-		 head =  Reverse(head);
+		 head =  Reverse(head);  // O(n^2)
+		// head = ReverseBetter(head); // O(n)
 		 printNode(head);
 		 
 	}
