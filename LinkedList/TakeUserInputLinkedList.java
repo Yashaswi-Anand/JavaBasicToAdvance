@@ -83,7 +83,8 @@ public class TakeUserInputLinkedList {
 		printNode(head);
 		System.out.println();
 		System.out.println("Recursively Insert Element at Position:");
-		head  = InsertElement(head,20,2);
+		head  = InsertNth(head,99,5);
+		
 		printNode(head);
 		System.out.println();
 		System.out.println("Recursively Insert Element at Position:");
@@ -93,8 +94,38 @@ public class TakeUserInputLinkedList {
 		
 		
 	}
+	
+	public static Node<Integer> InsertNth(Node<Integer> head, int data, int position){
+		
+		Node<Integer> trackedHeadNode = head;
+		    
+		Node<Integer> nodeToInsert = new Node<Integer>(data); 
+		    
+		    //Empty List - Returned newly created node or null
+		    if (head==null){return nodeToInsert;}
+		    
+		    //Inserting a Node ahead of the List
+		    if (position == 0){nodeToInsert.next = head; return nodeToInsert;}    
+		    
+		    //Traverse the Singly Linked List to 1 Position Prior
+		    //Stop traversing if you reached the end of the List
+		    int currPosition = 0;
+		    
+		    while (currPosition < position -1 && head.next != null){
+		        head = head.next;        
+		        currPosition++;       
+		    }
 
+		    //Inserting a Node in-between a List or at the end of of a List
+		    Node<Integer> nodeAtPosition = head.next;
+		    head.next = nodeToInsert;
+		    head = head.next;
+		    head.next = nodeAtPosition;
+		        
+		    return trackedHeadNode;
+		}                   
+	}
 
 	
 
-}
+
