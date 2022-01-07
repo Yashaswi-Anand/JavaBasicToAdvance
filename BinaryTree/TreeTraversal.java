@@ -7,30 +7,28 @@ public class TreeTraversal {
 	// print tree in post-order traversal-->
 	public static void postOrder(BinaryTreeNode<Integer> root) {
 		//Your code goes here
-        if(root== null) return ;
-        
-        postOrder(root.left);
-        postOrder(root.right);
-        System.out.print(root.data + " ");
+	        if(root== null) return ;
+	        postOrder(root.left);
+	        postOrder(root.right);
+	        System.out.print(root.data + " ");
 	}
 	
 	// print tree in per-order traversal-->
 	public static void preOrder(BinaryTreeNode<Integer> root) {
 		//Your code goes here
-        if(root == null) return;
-        System.out.print(root.data + " ");
-        preOrder(root.left);
-        preOrder(root.right);
+	        if(root == null) return;
+	        System.out.print(root.data + " ");
+	        preOrder(root.left);
+	        preOrder(root.right);
 	}
 	
 	// height of the tree-->
 	public static int height(BinaryTreeNode<Integer> root) {
 		//Your code goes here
-        if(root == null) return 0;
-        
-        int left = height(root.left);
-        int right = height(root.right);
-        return 1+ Math.max(left,right);
+	        if(root == null) return 0;
+	        int left = height(root.left);
+	        int right = height(root.right);
+	        return 1+ Math.max(left,right);
 	}
 	
 	public static void printTreeInDetails(BinaryTreeNode<Integer> root) {
