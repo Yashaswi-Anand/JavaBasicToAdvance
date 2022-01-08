@@ -4,6 +4,14 @@ import java.util.Scanner;
 
 public class TreeTraversal {
 	
+	// print tree in in-order traversal-->
+	public static void inOrder(BinaryTreeNode<Integer> root) {
+		if(root == null) return;
+		inOrder(root.left);
+		System.out.print(root.data + " ");
+		inOrder(root.right);
+	}
+	
 	// print tree in post-order traversal-->
 	public static void postOrder(BinaryTreeNode<Integer> root) {
 		//Your code goes here
@@ -79,6 +87,9 @@ public class TreeTraversal {
 		System.out.println();
 		System.out.println("Print post-order: ");
 		postOrder(root);
+		System.out.println();
+		System.out.println("Print in-order: ");
+		inOrder(root);
 
 	}
 
