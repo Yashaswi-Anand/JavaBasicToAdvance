@@ -8,23 +8,12 @@ public class RemoveLeafNodes {
 		if(root == null) return null;
 		
 		if(root.left == null && root.right == null) {
-			root.data = -1;
+			return null;
 		}
-		removeLeafNodes(root.left);
-		removeLeafNodes(root.right);
+		root.left =  removeLeafNodes(root.left);
+		root.right =  removeLeafNodes(root.right);
 		return root;
 		
-	}
-	
-	public static void printTree(BinaryTreeNode<Integer> root) {
-		if(root == null) return;
-		
-		System.out.print(root.data+ " : ");
-		if(root.left != null) System.out.print("L"+ root.left.data + ", ");
-		if(root.right != null) System.out.print("R"+ root.right.data + ", ");
-		System.out.println();
-		printTree(root.left);
-		printTree(root.right);
 	}
 	
 	public static BinaryTreeNode<Integer> takeTreeInputBetter(boolean isRoot,int parentData,boolean isLeft){
@@ -69,8 +58,9 @@ public class RemoveLeafNodes {
 		// TODO Auto-generated method stub
 		
 		BinaryTreeNode<Integer> root =  takeTreeInputBetter(true,0,true);
+		printTreeInDetails(root);
+		System.out.println("After remove leaves: ");
 		root = removeLeafNodes(root);
-		printTree(root);
 		printTreeInDetails(root);
 		
 
