@@ -49,12 +49,11 @@ public class NumberOfLeaves {
 		BinaryTreeNode<Integer> leftData = takeTreeInputBetter(false,rootData,true);
 		BinaryTreeNode<Integer> rightData = takeTreeInputBetter(false, rootData,false);
 		root.left = leftData;
-		root.right = rightData;
+		root.right = rightData;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 		return root;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		BinaryTreeNode<Integer> root = takeTreeInputBetter(true,0,true);
 		System.out.println("Leaves node are: ");
@@ -66,7 +65,6 @@ public class NumberOfLeaves {
 		System.out.println("Nodes at depth k: ");
 		printAtdepthK(root,k);
 		
-
 	}
 
 }

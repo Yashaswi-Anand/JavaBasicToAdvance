@@ -40,7 +40,7 @@ public class TreeTraversal {
 	}
 	
 	public static void printTreeInDetails(BinaryTreeNode<Integer> root) {
-		if(root == null) return;
+		if(root == null) return; 
 		System.out.print(root.data+ ": ");
 		if(root.left != null) {
 			System.out.print("L" + root.left.data+ ", ");
