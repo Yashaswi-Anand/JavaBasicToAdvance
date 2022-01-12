@@ -81,6 +81,7 @@ public class CheckBalanceBST {
 		System.out.println("isBalance: " + isBalanceBST(root));
 		System.out.println("isBalanceBetter->O(n): " + isBalanceBSTBetter(root).isBalance);
 		
+		
 
 
 	}
