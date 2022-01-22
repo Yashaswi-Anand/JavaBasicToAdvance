@@ -38,7 +38,7 @@ public class MinInArray {
 		int a[] = {3,4,2,1,7,8};
 		int min = findMin(a,0);
 		System.out.println(min);
-		if(a.length(a,a[0],1);
+		findMin1(a,Integer.MAX_VALUE,0);
 
 	}
 
