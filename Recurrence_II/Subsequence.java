@@ -4,6 +4,18 @@ import java.util.Scanner;
 
 public class Subsequence {
 	
+	public static void printSubsequence(String str, String stringSofar) {
+		
+		if(str.length() == 0) {
+			System.out.print(stringSofar+ " ");
+			return;
+		}
+		String smallInput = str.substring(1);
+		printSubsequence(smallInput,stringSofar);
+		printSubsequence(smallInput, stringSofar+str.charAt(0));
+		
+	}
+	
 	public static String[] findSubsequence(String input) {
 		 
 		if(input.length() == 0) {
@@ -37,6 +49,8 @@ public class Subsequence {
 		for(String outputString: ans) {
 			System.out.print(outputString+ " ");
 		}
+		System.out.println();
+		printSubsequence(str, "");
 
 	}
 
