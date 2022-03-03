@@ -4,7 +4,7 @@ public class PriorityQueueUse {
 
 	public static void main(String[] args) throws PriorityQueueException {
 		
-		PriorityQueue<String> pq = new PriorityQueue<String>();
+		Priority_Queue<String> pq = new Priority_Queue<String>();
 		pq.insert("abc", 15);
 		pq.insert("def", 13);
 		pq.insert("mno", 90);
