@@ -2,11 +2,11 @@ package PriorityQueue;
 
 import java.util.ArrayList;
 
-public class PriorityQueue<T> {
+public class Priority_Queue<T> {
 
 	private ArrayList<Element<T>>  heap;
 	
-	public PriorityQueue() {
+	public Priority_Queue() {
 		heap = new ArrayList<>();
 	}
 	
