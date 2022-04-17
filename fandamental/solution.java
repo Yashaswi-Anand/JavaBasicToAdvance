@@ -7,7 +7,11 @@ public class solution {
 		
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int arr[] = new int[n];
+		int arr[] = {1,2,3,4,5,6,7};
+		for(int i: arr){
+			System.out.println(i);
+		}
+
 		
 	}
 }
