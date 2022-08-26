@@ -48,9 +48,18 @@ public class FindTheUniqueElement {
 		
 		return arr;
 	}
+
+    public static int UniqueElmentByXOR(int arr[]){
+        int ans = 0;
+        for(int i=0;i<arr.length;i++){
+            ans = ans^arr[i];
+        }
+        return ans;
+    }
 	
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		// Method 1: Using sort
     	Scanner sc = new Scanner(System.in);
     	System.out.println("Enter the size of array:");
     	int n = sc.nextInt();
@@ -60,6 +69,11 @@ public class FindTheUniqueElement {
     		arr[i] = sc.nextInt();
     	}
     	System.out.println(findUnique(arr));
+
+        // Method 2: using XOR
+        System.out.println(UniqueElmentByXOR(arr));
 	}
+
+
 
 }
